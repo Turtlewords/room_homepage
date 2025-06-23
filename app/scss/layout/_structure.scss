@@ -1,0 +1,45 @@
+@use "../globals/colors";
+
+.header {
+    position: relative;
+    z-index: 0; 
+    display: flex;
+}
+
+.header__head {
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    width: 50%;
+    z-index: 1;
+    top: 3rem;
+    left: 1.5rem;
+}
+
+.header__arrows {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+.arrows {
+    background-color: colors.$black;
+    padding: 1rem;
+}
+
+.hero__content {
+    padding: 2rem;
+}
+
+.content__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about {
+    padding: 2rem;
+}

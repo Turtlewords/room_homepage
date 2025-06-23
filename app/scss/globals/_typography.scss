@@ -1,4 +1,34 @@
+@use "../globals/colors";
+
 @font-face {
     font-family: "LeagueSpartan";
     src: url("../fonts/LeagueSpartan-VariableFont_wght.ttf");
+}
+
+body {font-family: "LeagueSpartan";
+
+}
+
+.hero-content__title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-content__copy, .about__copy {
+    color: colors.$grey-500;
+    line-height: 1.3;
+}
+
+.content-link__title {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 500;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 4px;
+    margin: 0;
 }
