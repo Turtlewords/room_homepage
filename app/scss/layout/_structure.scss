@@ -1,5 +1,9 @@
 @use "../globals/colors";
 
+.container {
+    position: relative;
+}
+
 .hero-container {
     display: flex;
     width: 100vw;

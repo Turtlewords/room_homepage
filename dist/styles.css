@@ -50,6 +50,10 @@ body {
      object-fit: cover;
 }
 
+.container {
+  position: relative;
+}
+
 .hero-container {
   display: flex;
   width: 100vw;
