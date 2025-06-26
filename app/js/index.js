@@ -45,7 +45,7 @@ prevBtnList.forEach((btn) => {
         moveToSlide(track, currentSlide, prevSlide)
     }
     })
-    updateCarouselHeight();
+    // updateCarouselHeight();
 })
 
 
@@ -65,7 +65,7 @@ nextBtnList.forEach((btn) => {
         moveToSlide(track, currentSlide, nextSlide)
     }
     })
-    updateCarouselHeight();
+    // updateCarouselHeight();
 })
 
 heroMenuBtn.addEventListener("click", showMobileMenu);
@@ -83,11 +83,19 @@ function setSlidePosition(slide, index) {
     slide.style.left = `${slideWidth * index}px`
 }
 
-function updateCarouselHeight() {
-    const currentSlide = track.querySelector(".current-slide");
-    carousel.style.height = parseInt(window.getComputedStyle(currentSlide).height) + "px";
+// function updateCarouselHeight() {
+//     const currentSlide = track.querySelector(".current-slide");
 
-}
+
+
+//     if (window.innerWidth < 768) {
+//         carousel.style.height = parseInt(window.getComputedStyle(currentSlide).height) + "px";
+//     } else if (window.innerWidth >= 768 && window.innerWidth < 1400) {
+//         carousel.style.height = "30vh";
+//     }
+    
+
+// }
 
 
 

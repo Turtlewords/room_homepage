@@ -1,9 +1,35 @@
 @media (min-width: 768px) {
-   .hero {
-    height: 35vh;
+   .carousel {
+   //  height: 640px;
    } 
 
-//    .hero__img {
-//     object-fit: cover;
-//    }
+   .hero__img {
+    object-fit: cover;
+    max-height: 400px;
+   //  flex-grow: 1;
+   }
+
+   .carousel__buttons {
+      width: 84px;
+      padding: 1.5rem 2rem;
+   }
+
+   .hero-content__title {
+      font-size: 3rem;
+   }
+
+   .content-link__title {
+      justify-content: flex-start;
+      gap: 1.5rem;
+   }
+
+   .hero__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 3rem;
+}
+   
+
 }
