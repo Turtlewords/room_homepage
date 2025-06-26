@@ -45,6 +45,7 @@ prevBtnList.forEach((btn) => {
         moveToSlide(track, currentSlide, prevSlide)
     }
     })
+    updateCarouselHeight();
 })
 
 
@@ -64,6 +65,7 @@ nextBtnList.forEach((btn) => {
         moveToSlide(track, currentSlide, nextSlide)
     }
     })
+    updateCarouselHeight();
 })
 
 heroMenuBtn.addEventListener("click", showMobileMenu);
@@ -87,10 +89,7 @@ function updateCarouselHeight() {
 
 }
 
-function positionArrowButtons() {
-    const currentSlide = track.querySelector(".current-slide");
-    prevBtn
-}
+
 
 
 function moveToSlide(track, currentSlide, targetSlide) {

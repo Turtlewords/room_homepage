@@ -65,6 +65,8 @@ body {
 }
 
 .hero__img {
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -126,7 +128,8 @@ body {
 
 .hero-head {
   position: relative;
-  height: 360px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .carousel__button-box {
@@ -134,7 +137,7 @@ body {
   align-items: center;
   position: absolute;
   z-index: 1;
-  bottom: 0;
+  bottom: 4px;
   right: 0;
 }
 
