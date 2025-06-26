@@ -21,9 +21,17 @@ body {font-family: "LeagueSpartan";
 }
 
 .content-link__title {
+    text-decoration: none;
     text-transform: uppercase;
+    color: colors.$black;
     letter-spacing: 8px;
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-link__title:hover {
+    opacity: 0.5;
 }
 
 .about__title {

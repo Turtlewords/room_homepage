@@ -33,7 +33,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    transition: transform 250ms ease-in;
+    transition: transform 700ms ease-in;
 }
 
 .carousel__slide {
@@ -75,6 +75,11 @@
 .carousel__buttons {
     background-color: colors.$black;
     padding: 1rem;
+}
+
+.carousel__buttons:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 .hero__content {
