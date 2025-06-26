@@ -1,5 +1,9 @@
 @use "../globals/colors";
 
+body {
+    position: relative;
+}
+
 .container {
     position: relative;
 }
@@ -100,3 +104,28 @@
 .about {
     padding: 2rem;
 }
+
+.mobile-menu__background {
+    display: none;
+    position: absolute;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.mobile-menu {
+    padding: 1.5rem;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: colors.$white;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    transition: transform ease-in-out .4s;
+}
+
