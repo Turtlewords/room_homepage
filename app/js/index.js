@@ -1,79 +1,137 @@
 // Elements
+const carousel = document.querySelector(".carousel");
+const track = document.querySelector(".carousel__track");
+const slides = document.querySelectorAll(".carousel__slide");
+const prevBtn = document.querySelector(".carousel__button--left");
+const nextBtn = document.querySelector(".carousel__button--right");
+const prevBtnList = document.querySelectorAll(".carousel__button--left");
+const nextBtnList = document.querySelectorAll(".carousel__button--right");
 
-const heroContainer = document.querySelector(".hero-container");
-const prevBtnAll = document.querySelectorAll(".arrows__left");
-const nextBtnAll = document.querySelectorAll(".arrows__right");
-const heros = document.querySelectorAll(".hero");
+const slideWidth = slides[0].getBoundingClientRect().width;
 
-let currentIndex = 0;
+
+
+slides.forEach(setSlidePosition);
+
 
 
 const mobileHeros = ["images/mobile-image-hero-1.jpg", "images/mobile-image-hero-2.jpg", 
     "images/mobile-image-hero-3.jpg"];
 
-const desktopHeros = ["images/desktop-image-hero-1.jpg", "images?desktop-image-hero-2.jpg", 
+    const desktopHeros = ["images/desktop-image-hero-1.jpg", "images?desktop-image-hero-2.jpg", 
     "images/desktop-image-hero-3.jpg"];
 
 
     // Event Listeners
 
-prevBtnAll.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        showPrevHero(currentIndex);
-    })
-})
-
-nextBtnAll.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        showNextHero(currentIndex);
-    })
-})
 
 
 
+    // Function Calls
+
+updateCarouselHeight()
 
     // Functions
 
-    function showPrevHero(index) {
-        
+function setSlidePosition(slide, index) {
+    slide.style.left = `${slideWidth * index}px`
+}
 
-        heros.forEach((hero) => {
-            hero.style.transform = `translate(100%)`;
-        })
+function updateCarouselHeight() {
+    const currentSlide = track.querySelector(".current-slide");
+    carousel.style.height = parseInt(window.getComputedStyle(currentSlide).height) + "px";
 
-        if (index > 0) {
-            heros.forEach((hero) => {
-            hero.style.transform = `translate(100%)`;
-        })
-            currentIndex--;
-        } else {
-            heros.forEach((hero) => {
-            hero.style.transform = `translate(-200%)`;
-        })
-            currentIndex = 2;
-        }
+}
 
-        console.log("Index: " + currentIndex)
+function positionArrowButtons() {
+    const currentSlide = track.querySelector(".current-slide");
+    prevBtn
+}
+
+
+
+function moveToSlide(track, currentSlide, targetSlide) {
+    
+        track.style.transform = `translateX(-${targetSlide.style.left})`
+        currentSlide.classList.remove("current-slide");
+        targetSlide.classList.add("current-slide");
+}
+
+// Add event listeners to all prev btns
+
+prevBtnList.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        let lastIndex = slides.length - 1;
+    const currentSlide = track.querySelector(".current-slide");
+    const prevSlide = currentSlide.previousElementSibling;
+
+    if (slides[0].classList.contains("current-slide")) {
+        let resetToMove = slides[lastIndex].style.left;
+        slides[0].classList.remove("current-slide")
+        slides[lastIndex].classList.add("current-slide")
+        track.style.transform = `translateX(-${resetToMove})`
+
+    } else {
+        moveToSlide(track, currentSlide, prevSlide)
     }
+    })
+})
 
-    function showNextHero(index) {
-        
-        console.log("next");
+// Single prev btn addeventlistener
 
-       
+// prevBtn.addEventListener("click", () => {
+//     let lastIndex = slides.length - 1;
+//     const currentSlide = track.querySelector(".current-slide");
+//     const prevSlide = currentSlide.previousElementSibling;
 
-        if (index < heros.length - 1) {
-            heros.forEach((hero) => {
-            hero.style.transform = `translate(-100%)`;
-        })
-            currentIndex++;
-        } else {
-            heros.forEach((hero) => {
-            hero.style.transform = `translate(200%)`;
-        })
-            currentIndex = 0;
-        }
+//     if (slides[0].classList.contains("current-slide")) {
+//         let resetToMove = slides[lastIndex].style.left;
+//         slides[0].classList.remove("current-slide")
+//         slides[lastIndex].classList.add("current-slide")
+//         track.style.transform = `translateX(-${resetToMove})`
+
+//     } else {
+//         moveToSlide(track, currentSlide, prevSlide)
+//     }
+// })
 
 
-        console.log("Index: " + currentIndex)
+// Add event listeners to all next btns
+
+nextBtnList.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        let lastIndex = slides.length - 1;
+        const currentSlide = track.querySelector(".current-slide");
+        const nextSlide = currentSlide.nextElementSibling;
+
+    if (slides[lastIndex].classList.contains("current-slide")) {
+        let resetToMove = slides[0].style.left;
+        slides[lastIndex].classList.remove("current-slide")
+        slides[0].classList.add("current-slide")
+        track.style.transform = `translateX(${resetToMove})`
+
+    } else {
+        moveToSlide(track, currentSlide, nextSlide)
     }
+    })
+})
+
+// Add event listeners to one next button
+
+
+// nextBtn.addEventListener("click", () => {
+//     let lastIndex = slides.length - 1;
+//     const currentSlide = track.querySelector(".current-slide");
+//     const nextSlide = currentSlide.nextElementSibling;
+
+//     if (slides[lastIndex].classList.contains("current-slide")) {
+//         let resetToMove = slides[0].style.left;
+//         slides[lastIndex].classList.remove("current-slide")
+//         slides[0].classList.add("current-slide")
+//         track.style.transform = `translateX(${resetToMove})`
+
+//     } else {
+//         moveToSlide(track, currentSlide, nextSlide)
+//     }
+    
+// }) 
