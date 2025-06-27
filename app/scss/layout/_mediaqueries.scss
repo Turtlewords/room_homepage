@@ -53,8 +53,53 @@
    height: 325px;
 }
 
+}
 
+@media (min-width: 1400px) {
 
-   
+   .carousel {
+      height: 100%;
+      
+   }
 
+   .header {
+      display: none;
+   }
+
+   .carousel__slide{
+      flex-direction: row;
+      
+   }
+
+   .main {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1fr;
+   }
+
+   .hero__img {
+      max-height: initial;
+   }
+
+   .hero__img--1 {
+      content: url("../images/desktop-image-hero-1.jpg")
+   }
+
+   .hero__img--2 {
+      content: url("../images/desktop-image-hero-2.jpg")
+   }
+
+   .hero__img--3 {
+      content: url("../images/desktop-image-hero-3.jpg")
+   }
+
+   .hero__content {
+      padding: 2rem 6rem;
+      gap: 1rem;
+      height: initial;
+      
+   }
+
+   .carousel__button-box {
+      right: -168px;
+   }
 }

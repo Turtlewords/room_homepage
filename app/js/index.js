@@ -111,6 +111,7 @@ function moveToSlide(track, currentSlide, targetSlide) {
 }
 
 function showMobileMenu() {
+    
     mobileMenuBackground.style.transform = "translateY(0)";
     mobileMenu.style.transform = "translateY(0)";
 }
@@ -118,6 +119,7 @@ function showMobileMenu() {
 function closeMobileMenu() {
     mobileMenuBackground.style.transform = "translateY(100%)";
     mobileMenu.style.transform = "translateY(-100%)";
+   
 }
 
 // Add event listeners to all prev btns
