@@ -2,6 +2,7 @@
 
 body {
     position: relative;
+    // overflow: hidden;
 }
 
 .container {
@@ -54,12 +55,25 @@ body {
 
 .header {
     position: absolute;
-    justify-content: space-between;
-    display: flex;
+    
     width: 50%;
     z-index: 1;
     top: 3rem;
     left: 1.5rem;
+}
+
+.header--mobile {
+    justify-content: space-between;
+    display: flex;
+}
+
+.header--desktop {
+    display: none;
+    align-items: center;
+}
+
+.desktop--nav-list {
+    gap: 2rem;
 }
 
 .hero-head {
@@ -78,8 +92,19 @@ body {
 
 .carousel__buttons {
     background-color: colors.$black;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 1rem;
+    border: none;
     
+}
+
+.carousel__button--left {
+    background-image: url("../images/icon-angle-left.svg");   
+}
+
+.carousel__button--right {
+    background-image: url("../images/icon-angle-right.svg");   
 }
 
 .carousel__buttons:hover {
@@ -112,13 +137,13 @@ body {
 }
 
 .mobile-menu__background {
-    display: block;
+    display: flex;
     position: absolute;
     background-color: hsla(0, 0%, 0%, 0.4);
     height: 100%;
     width: 100%;
     z-index: 1;
-    transform: translateY(100%);
+    transform: translateY(-100%);
     transition: transform ease-in-out .6s;
     
 }
@@ -137,4 +162,6 @@ body {
     transform: translateY(-100%);
     transition: transform ease-in-out .4s;
 }
+
+
 

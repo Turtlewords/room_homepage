@@ -12,14 +12,14 @@
 </head>
 <body>
   <!-- Mobile Menu -->
-   <div class="mobile-menu">
+   <div class="mobile-menu" aria-live="polite">
       <img class="mobile-menu__close-btn" src="images/icon-close.svg" alt="close menu icon">
       <nav class="mobile-menu__nav">
-        <ul class="mobile-menu__nav-list">
-          <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">home</a></li>
-          <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">shop</a></li>
-          <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">about</a></li>
-          <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">contact</a></li>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
         </ul>
       </nav>
     </div>
@@ -31,8 +31,21 @@
 
 
     <header class="header">
-          <img class="hero__menu" src="images/icon-hamburger.svg" alt="hamburger menu">
-          <img class="hero__logo" src="images/logo.svg" alt="room logo">
+      <div class="header--mobile">
+            <img class="hero__menu" src="images/icon-hamburger.svg" alt="hamburger menu">
+            <img class="hero__logo" src="images/logo.svg" alt="room logo">
+      </div>
+      <div class="header--desktop">
+        <img class="hero__logo" src="images/logo.svg" alt="room logo">
+        <nav class="desktop-menu__nav">
+        <ul class="nav-list desktop--nav-list">
+          <li class="nav-item"><a class="nav-link desktop--nav-link" href="#">home</a></li>
+          <li class="nav-item"><a class="nav-link desktop--nav-link" href="#">shop</a></li>
+          <li class="nav-item"><a class="nav-link desktop--nav-link" href="#">about</a></li>
+          <li class="nav-item"><a class="nav-link desktop--nav-link" href="#">contact</a></li>
+        </ul>
+      </nav>
+      </div>
     </header>  
 
     
@@ -51,8 +64,8 @@
               <img class="hero__img hero__img--1" src="images/mobile-image-hero-1.jpg" alt="chairs around a table">
               
               <div class="carousel__button-box">
-                <img class="carousel__buttons carousel__button--left" src="images/icon-angle-left.svg" alt="left arrow">
-                <img class="carousel__buttons carousel__button--right" src="images/icon-angle-right.svg" alt="right arrow">
+                <button class="carousel__buttons carousel__button--left"></button>
+                <button class="carousel__buttons carousel__button--right"></button>
               </div>
             </div>
             <section class="hero__content">
@@ -71,8 +84,8 @@
               <img class="hero__img hero__img--2" src="images/mobile-image-hero-2.jpg" alt="chairs">
               
               <div class="carousel__button-box">
-                <img class="carousel__buttons carousel__button--left" src="images/icon-angle-left.svg" alt="left arrow">
-                <img class="carousel__buttons carousel__button--right" src="images/icon-angle-right.svg" alt="right arrow">
+                <button class="carousel__buttons carousel__button--left"></button>
+                <button class="carousel__buttons carousel__button--right"></button>
               </div>
             </div>
             <section class="hero__content">
@@ -91,8 +104,8 @@
               <img class="hero__img hero__img--3" src="images/mobile-image-hero-3.jpg" alt="chairs">
               
               <div class="carousel__button-box">
-                <img class="carousel__buttons carousel__button--left" src="images/icon-angle-left.svg" alt="left arrow">
-                <img class="carousel__buttons carousel__button--right" src="images/icon-angle-right.svg" alt="right arrow">
+                <button class="carousel__buttons carousel__button--left"></button>
+                <button class="carousel__buttons carousel__button--right"></button>
               </div>
             </div>
             <section class="hero__content">

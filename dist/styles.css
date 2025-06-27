@@ -48,20 +48,36 @@ body {
 .about__title {
   text-transform: uppercase;
   font-size: 0.9rem;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   margin: 0;
 }
 
-.mobile-menu__nav-list {
+.about__copy {
+  margin-bottom: 0;
+}
+
+.nav-list {
   list-style-type: none;
   display: flex;
   gap: 1rem;
 }
 
-.mobile-menu__nav-link {
+.nav-link {
   text-decoration: none;
   color: #000000;
   font-weight: 500;
+}
+
+.desktop--nav-link {
+  color: #FFFFFF;
+  padding: 0.75rem 0;
+  background-color: transparent;
+}
+
+.desktop--nav-link:hover {
+  opacity: 0.7;
+  background: linear-gradient(#FFFFFF 0 0) center bottom/100% 5px no-repeat;
+  background-size: 50% 3px;
 }
 
 .hero__img {
@@ -121,12 +137,24 @@ body {
 
 .header {
   position: absolute;
-  justify-content: space-between;
-  display: flex;
   width: 50%;
   z-index: 1;
   top: 3rem;
   left: 1.5rem;
+}
+
+.header--mobile {
+  justify-content: space-between;
+  display: flex;
+}
+
+.header--desktop {
+  display: none;
+  align-items: center;
+}
+
+.desktop--nav-list {
+  gap: 2rem;
 }
 
 .hero-head {
@@ -146,7 +174,18 @@ body {
 
 .carousel__buttons {
   background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 1rem;
+  border: none;
+}
+
+.carousel__button--left {
+  background-image: url("../images/icon-angle-left.svg");
+}
+
+.carousel__button--right {
+  background-image: url("../images/icon-angle-right.svg");
 }
 
 .carousel__buttons:hover {
@@ -180,13 +219,13 @@ body {
 }
 
 .mobile-menu__background {
-  display: block;
+  display: flex;
   position: absolute;
   background-color: hsla(0, 0%, 0%, 0.4);
   height: 100%;
   width: 100%;
   z-index: 1;
-  transform: translateY(100%);
+  transform: translateY(-100%);
   transition: transform ease-in-out 0.6s;
 }
 
@@ -217,6 +256,7 @@ body {
   }
   .carousel__buttons {
     width: 84px;
+    height: 84px;
     padding: 1.5rem 2rem;
   }
   .hero-content__title {
@@ -252,10 +292,14 @@ body {
 }
 @media (min-width: 1400px) {
   .carousel {
-    height: 100%;
+    height: 534px;
+    min-height: initial;
   }
-  .header {
+  .header--mobile {
     display: none;
+  }
+  .header--desktop {
+    display: flex;
   }
   .carousel__slide {
     flex-direction: row;
@@ -283,5 +327,10 @@ body {
   }
   .carousel__button-box {
     right: -168px;
+  }
+}
+@media (prefers-reduced-motion) {
+  .carousel__track {
+    transition: none;
   }
 }/*# sourceMappingURL=styles.css.map */

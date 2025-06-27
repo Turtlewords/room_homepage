@@ -20,13 +20,6 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 slides.forEach(setSlidePosition);
 
 
-const mobileHeros = ["images/mobile-image-hero-1.jpg", "images/mobile-image-hero-2.jpg", 
-    "images/mobile-image-hero-3.jpg"];
-
-const desktopHeros = ["images/desktop-image-hero-1.jpg", "images?desktop-image-hero-2.jpg", 
-    "images/desktop-image-hero-3.jpg"];
-
-
     // Event Listeners
 
 prevBtnList.forEach((btn) => {
@@ -44,7 +37,7 @@ prevBtnList.forEach((btn) => {
     } else {
         moveToSlide(track, currentSlide, prevSlide)
     }
-    // updateCarouselHeight();
+    
     })
     
 })
@@ -65,7 +58,7 @@ nextBtnList.forEach((btn) => {
     } else {
         moveToSlide(track, currentSlide, nextSlide)
     }
-    // updateCarouselHeight();
+    
     })
     
 })
@@ -75,32 +68,11 @@ heroMenuBtn.addEventListener("click", showMobileMenu);
 closeMobileMenuBtn.addEventListener("click", closeMobileMenu);
 
 
-    // Function Calls
-
-// updateCarouselHeight()
-
     // Functions
 
 function setSlidePosition(slide, index) {
     slide.style.left = `${slideWidth * index}px`
 }
-
-// function updateCarouselHeight() {
-//     const currentSlide = track.querySelector(".current-slide");
-
-//     console.log("window.innerWidth: " + window.innerWidth);
-//     console.log("current-slide height: " + parseInt(window.getComputedStyle(currentSlide).height))
-
-//     if (window.innerWidth < 768) {
-//         carousel.style.height = parseInt(window.getComputedStyle(currentSlide).height) + "px";
-//     } else if (window.innerWidth >= 768 && window.innerWidth < 1400) {
-//         carousel.style.height = "30vh";
-//     }
-    
-
-// }
-
-
 
 
 function moveToSlide(track, currentSlide, targetSlide) {
@@ -117,54 +89,8 @@ function showMobileMenu() {
 }
 
 function closeMobileMenu() {
-    mobileMenuBackground.style.transform = "translateY(100%)";
+    mobileMenuBackground.style.transform = "translateY(-100%)";
     mobileMenu.style.transform = "translateY(-100%)";
    
 }
 
-// Add event listeners to all prev btns
-
-
-
-// Single prev btn addeventlistener
-
-// prevBtn.addEventListener("click", () => {
-//     let lastIndex = slides.length - 1;
-//     const currentSlide = track.querySelector(".current-slide");
-//     const prevSlide = currentSlide.previousElementSibling;
-
-//     if (slides[0].classList.contains("current-slide")) {
-//         let resetToMove = slides[lastIndex].style.left;
-//         slides[0].classList.remove("current-slide")
-//         slides[lastIndex].classList.add("current-slide")
-//         track.style.transform = `translateX(-${resetToMove})`
-
-//     } else {
-//         moveToSlide(track, currentSlide, prevSlide)
-//     }
-// })
-
-
-// Add event listeners to all next btns
-
-
-
-// Add event listeners to one next button
-
-
-// nextBtn.addEventListener("click", () => {
-//     let lastIndex = slides.length - 1;
-//     const currentSlide = track.querySelector(".current-slide");
-//     const nextSlide = currentSlide.nextElementSibling;
-
-//     if (slides[lastIndex].classList.contains("current-slide")) {
-//         let resetToMove = slides[0].style.left;
-//         slides[lastIndex].classList.remove("current-slide")
-//         slides[0].classList.add("current-slide")
-//         track.style.transform = `translateX(${resetToMove})`
-
-//     } else {
-//         moveToSlide(track, currentSlide, nextSlide)
-//     }
-    
-// }) 
