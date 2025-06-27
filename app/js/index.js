@@ -44,8 +44,9 @@ prevBtnList.forEach((btn) => {
     } else {
         moveToSlide(track, currentSlide, prevSlide)
     }
-    })
     // updateCarouselHeight();
+    })
+    
 })
 
 
@@ -64,8 +65,9 @@ nextBtnList.forEach((btn) => {
     } else {
         moveToSlide(track, currentSlide, nextSlide)
     }
-    })
     // updateCarouselHeight();
+    })
+    
 })
 
 heroMenuBtn.addEventListener("click", showMobileMenu);
@@ -75,7 +77,7 @@ closeMobileMenuBtn.addEventListener("click", closeMobileMenu);
 
     // Function Calls
 
-updateCarouselHeight()
+// updateCarouselHeight()
 
     // Functions
 
@@ -86,7 +88,8 @@ function setSlidePosition(slide, index) {
 // function updateCarouselHeight() {
 //     const currentSlide = track.querySelector(".current-slide");
 
-
+//     console.log("window.innerWidth: " + window.innerWidth);
+//     console.log("current-slide height: " + parseInt(window.getComputedStyle(currentSlide).height))
 
 //     if (window.innerWidth < 768) {
 //         carousel.style.height = parseInt(window.getComputedStyle(currentSlide).height) + "px";
@@ -108,12 +111,12 @@ function moveToSlide(track, currentSlide, targetSlide) {
 }
 
 function showMobileMenu() {
-    mobileMenuBackground.style.display = "block";
+    mobileMenuBackground.style.transform = "translateY(0)";
     mobileMenu.style.transform = "translateY(0)";
 }
 
 function closeMobileMenu() {
-    mobileMenuBackground.style.display = "none";
+    mobileMenuBackground.style.transform = "translateY(100%)";
     mobileMenu.style.transform = "translateY(-100%)";
 }
 

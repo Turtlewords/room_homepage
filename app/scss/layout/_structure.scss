@@ -19,7 +19,7 @@ body {
     position: relative;
     
     width: 100%;
-    height: 685px;
+    min-height: 685px;
     margin: 0;
 
 }
@@ -89,6 +89,8 @@ body {
 
 .hero__content {
     padding: 2rem;
+    height: fit-content;
+    flex: 1;
 }
 
 .content__link {
@@ -104,15 +106,21 @@ body {
 
 .about {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mobile-menu__background {
-    display: none;
+    display: block;
     position: absolute;
     background-color: hsla(0, 0%, 0%, 0.4);
     height: 100%;
     width: 100%;
     z-index: 1;
+    transform: translateY(100%);
+    transition: transform ease-in-out .4s;
+    
 }
 
 .mobile-menu {

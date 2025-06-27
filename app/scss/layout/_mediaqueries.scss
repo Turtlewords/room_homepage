@@ -1,11 +1,13 @@
 @media (min-width: 768px) {
-   .carousel {
-   //  height: 640px;
-   } 
+   
+   .header {
+      padding: 2rem 0 2rem 2rem;
+   }
 
    .hero__img {
     object-fit: cover;
     max-height: 400px;
+    width: 100%;
    //  flex-grow: 1;
    }
 
@@ -30,6 +32,29 @@
       justify-content: center;
       padding: 2rem 3rem;
 }
+
+   .mobile-menu {
+   padding: 3rem;
+}
+
+
+.about {
+   height: 300px;
+   padding: 4rem;
+}
+
+.about__title {
+   font-size: 1.25rem;
+}
+
+.main__img--dark, .main__img--light {
+   object-fit: cover;
+   width: 100%;
+   height: 325px;
+}
+
+
+
    
 
 }
