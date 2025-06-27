@@ -278,7 +278,7 @@ body {
   }
   .about {
     height: 300px;
-    padding: 4rem;
+    padding: 3rem;
   }
   .about__title {
     font-size: 1rem;
@@ -309,7 +309,11 @@ body {
     flex-direction: row;
   }
   .main {
+    max-height: 280px;
     flex-direction: row;
+  }
+  .about {
+    height: 280px;
   }
   .main__img--dark, .main__img--light {
     height: initial;
@@ -327,12 +331,9 @@ body {
     content: url("../images/desktop-image-hero-3.jpg");
   }
   .hero__content {
-    padding: 0 6rem;
+    padding: 0 6.125rem;
     gap: 0.5rem;
     height: initial;
-  }
-  .hero-content__copy, .hero-content__title, .content-link__title {
-    max-width: 480px;
   }
   .carousel__button-box {
     right: -160px;
