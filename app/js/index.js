@@ -1,5 +1,5 @@
 // Elements
-const container = document.querySelector(".container");
+
 const carousel = document.querySelector(".carousel");
 const track = document.querySelector(".carousel__track");
 
@@ -29,7 +29,7 @@ prevBtnList.forEach((btn) => {
         const prevSlide = currentSlide.previousElementSibling;
 
     if (slides[0].classList.contains("current-slide")) {
-        let resetToMove = slides[lastIndex].style.left;
+        const resetToMove = slides[lastIndex].style.left;
         slides[0].classList.remove("current-slide")
         slides[lastIndex].classList.add("current-slide")
         track.style.transform = `translateX(-${resetToMove})`
@@ -45,12 +45,12 @@ prevBtnList.forEach((btn) => {
 
 nextBtnList.forEach((btn) => {
     btn.addEventListener("click", () => {
-        let lastIndex = slides.length - 1;
+        const lastIndex = slides.length - 1;
         const currentSlide = track.querySelector(".current-slide");
         const nextSlide = currentSlide.nextElementSibling;
 
     if (slides[lastIndex].classList.contains("current-slide")) {
-        let resetToMove = slides[0].style.left;
+        const resetToMove = slides[0].style.left;
         slides[lastIndex].classList.remove("current-slide")
         slides[0].classList.add("current-slide")
         track.style.transform = `translateX(${resetToMove})`

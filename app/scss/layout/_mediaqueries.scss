@@ -45,7 +45,7 @@
 }
 
 .about__title {
-   font-size: 1.25rem;
+   font-size: 1.5rem;
 }
 
 .main__img--dark, .main__img--light {
@@ -64,6 +64,11 @@
       
    }
 
+   .header {
+      top: 2rem;
+      left: 2rem;
+   }
+
    .header--mobile {
       display: none;
    }
@@ -78,8 +83,10 @@
    }
 
    .main {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr 1fr;
+      // display: grid;
+      // grid-template-columns: 1fr 1.25fr 1fr;
+      height: 400px;
+      flex-direction: row;
    }
 
    .hero__img {

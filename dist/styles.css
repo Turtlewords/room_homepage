@@ -17,7 +17,7 @@ img {
   src: url("../fonts/LeagueSpartan-VariableFont_wght.ttf");
 }
 body {
-  font-family: "LeagueSpartan";
+  font-family: "LeagueSpartan", "Helvetica", sans-serif;
 }
 
 .hero-content__title {
@@ -281,7 +281,7 @@ body {
     padding: 4rem;
   }
   .about__title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .main__img--dark, .main__img--light {
     -o-object-fit: cover;
@@ -295,6 +295,10 @@ body {
     height: 534px;
     min-height: initial;
   }
+  .header {
+    top: 2rem;
+    left: 2rem;
+  }
   .header--mobile {
     display: none;
   }
@@ -305,8 +309,8 @@ body {
     flex-direction: row;
   }
   .main {
-    display: grid;
-    grid-template-columns: 1fr 1.25fr 1fr;
+    height: 400px;
+    flex-direction: row;
   }
   .hero__img {
     max-height: initial;
