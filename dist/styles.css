@@ -28,15 +28,15 @@ body {
 
 .hero-content__copy, .about__copy {
   color: #A0A0A0;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .content-link__title {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
-  letter-spacing: 8px;
-  font-weight: 500;
+  letter-spacing: 10px;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
 }
@@ -255,8 +255,8 @@ body {
     width: 100%;
   }
   .carousel__buttons {
-    width: 82px;
-    height: 82px;
+    width: 80px;
+    height: 80px;
     padding: 1.5rem 2rem;
   }
   .hero-content__title {
@@ -296,13 +296,14 @@ body {
     min-height: initial;
   }
   .header {
-    padding: 0 0 0 2.125rem;
+    padding: 0 0 0 2.25rem;
   }
   .header--mobile {
     display: none;
   }
   .header--desktop {
     display: flex;
+    gap: 1rem;
   }
   .carousel__slide {
     flex-direction: row;
@@ -326,11 +327,15 @@ body {
     content: url("../images/desktop-image-hero-3.jpg");
   }
   .hero__content {
-    padding: 2rem 6rem;
+    padding: 0 6rem;
+    gap: 0.5rem;
     height: initial;
   }
+  .hero-content__copy, .hero-content__title, .content-link__title {
+    max-width: 480px;
+  }
   .carousel__button-box {
-    right: -164px;
+    right: -160px;
   }
 }
 @media (prefers-reduced-motion) {

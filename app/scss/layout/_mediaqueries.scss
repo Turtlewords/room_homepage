@@ -12,8 +12,8 @@
    }
 
    .carousel__buttons {
-      width: 82px;
-      height: 82px;
+      width: 80px;
+      height: 80px;
       padding: 1.5rem 2rem;
    }
 
@@ -65,7 +65,7 @@
    }
 
    .header {
-      padding: 0 0 0 2.125rem;
+      padding: 0 0 0 2.25rem;
    }
 
    .header--mobile {
@@ -74,6 +74,7 @@
 
    .header--desktop {
       display: flex;
+      gap: 1rem;
    }
 
    .carousel__slide{
@@ -109,14 +110,18 @@
    }
 
    .hero__content {
-      padding: 2rem 6rem;
-      
+      padding: 0 6rem;
+      gap: .5rem;
       height: initial;
       
    }
 
+   .hero-content__copy, .hero-content__title, .content-link__title {
+      max-width: 480px;
+   }
+
    .carousel__button-box {
-      right: -164px;
+      right: -160px;
    }
 }
 
