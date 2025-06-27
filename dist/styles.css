@@ -255,8 +255,8 @@ body {
     width: 100%;
   }
   .carousel__buttons {
-    width: 84px;
-    height: 84px;
+    width: 82px;
+    height: 82px;
     padding: 1.5rem 2rem;
   }
   .hero-content__title {
@@ -281,7 +281,7 @@ body {
     padding: 4rem;
   }
   .about__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main__img--dark, .main__img--light {
     -o-object-fit: cover;
@@ -296,8 +296,7 @@ body {
     min-height: initial;
   }
   .header {
-    top: 2rem;
-    left: 2rem;
+    padding: 0 0 0 2.125rem;
   }
   .header--mobile {
     display: none;
@@ -309,8 +308,10 @@ body {
     flex-direction: row;
   }
   .main {
-    height: 400px;
     flex-direction: row;
+  }
+  .main__img--dark, .main__img--light {
+    height: initial;
   }
   .hero__img {
     max-height: initial;
@@ -326,11 +327,10 @@ body {
   }
   .hero__content {
     padding: 2rem 6rem;
-    gap: 1rem;
     height: initial;
   }
   .carousel__button-box {
-    right: -168px;
+    right: -164px;
   }
 }
 @media (prefers-reduced-motion) {
